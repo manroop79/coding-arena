@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Coding Agents Arena
 
 Parallel coding agents with live event streaming, built with Next.js (App Router) and Bun. Users can select multiple agents (Mock, OpenAI, Claude), attach files, and watch live events (status, tool calls, diffs) via Server-Sent Events (SSE). The UI is chat-forward with Markdown rendering and a dedicated artifacts/diff view. Screenshots are included in the `public/` folder.
@@ -6,7 +5,7 @@ Parallel coding agents with live event streaming, built with Next.js (App Router
 ---
 
 ## Features
-- **Multi-agent runs**: Run Mock (always on), OpenAI (if `OPENAI_API_KEY`), Claude (if `ANTHROPIC_API_KEY`). Agents can run in parallel; unavailable agents are marked as inactive.
+- **Multi-agent runs**: Run Mock (always on), OpenAI (on with `OPENAI_API_KEY`), Claude (if `ANTHROPIC_API_KEY`). Agents can run in parallel; unavailable agents are marked as inactive.
 - **Streaming via SSE**: Live status, messages, tool calls, and diffs streamed to the UI.
 - **Artifacts & diffs**: Unified diffs emitted per agent; Mock emits real diffs, OpenAI synthesizes diffs from output.
 - **Attachments**: Upload files (text/code preferred). Mock reads and summarizes; OpenAI gets a preview in system prompt; Claude placeholder until enabled.
@@ -17,7 +16,7 @@ Parallel coding agents with live event streaming, built with Next.js (App Router
   - Prompt Composer with agent chips, attach, run/retry, Enter-to-submit (Shift+Enter newline), status pill.
   - Mobile: Timeline/Artifacts accessible via rail buttons (top), drawers slide in; composer stacks controls vertically.
 - **Error handling**: Inline agent errors, toasts for run/stream issues, fallbacks to Mock when keys are missing or streaming fails.
-- **No API key mode**: Works fully with MockAgent; real agents only activate when keys exist.
+- **No API key mode**: Works fully with MockAgent and OpenAI; real agents only activate when keys exist.
 
 ---
 
@@ -118,6 +117,7 @@ Open http://localhost:3000
 - OpenAI diffs are synthesized from streamed text; actual file edits are not applied to disk.
 - Claude is a stub until enabled; falls back to Mock.
 - Large or binary attachments are only listed by name/size; no preview.
+- No handling of PNGs and PDFs.
 - Dev-mode HMR can cause occasional stream timing quirks; production build avoids this.
 
 ---
@@ -136,5 +136,3 @@ Open http://localhost:3000
   - ![Mobile Composer](public/ss2.jpg)
   - ![Mobile Timeline Drawer](public/ss3.jpg)
 =======
-# coding-arena
->>>>>>> c017ea9a044ef8709fdbb513dc3caeae5eb1b191
