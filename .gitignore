@@ -1,0 +1,13 @@
+node_modules
+.next
+.env
+.env.local
+.DS_Store
+tmp
+/.turbo
+/coverage
+
+# Uploaded artifacts and workspace state
+/tmp/uploads
+/tmp/workspace
+

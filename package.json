@@ -1,0 +1,31 @@
+{
+  "name": "coding-agents-arena",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bunx next dev",
+    "build": "bunx next build",
+    "start": "bunx next start",
+    "lint": "bunx next lint"
+  },
+  "dependencies": {
+    "next": "14.2.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zustand": "4.5.4",
+    "framer-motion": "11.2.12",
+    "react-markdown": "9.0.1",
+    "remark-gfm": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.1",
+    "eslint": "9.11.1",
+    "eslint-config-next": "14.2.10",
+    "typescript": "5.6.2"
+  },
+  "packageManager": "bun@1.1.34"
+}
+
