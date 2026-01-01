@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Coding Agents Arena
 
 Parallel coding agents with live event streaming, built with Next.js (App Router) and Bun. Users can select multiple agents (Mock, OpenAI, Claude), attach files, and watch live events (status, tool calls, diffs) via Server-Sent Events (SSE). The UI is chat-forward with Markdown rendering and a dedicated artifacts/diff view. Screenshots are included in the `public/` folder.
@@ -134,3 +135,6 @@ Open http://localhost:3000
   - ![Timeline + Agents](app/public/ss1.jpg)
   - ![Mobile Composer](app/public/ss2.jpg)
   - ![Mobile Timeline Drawer](app/public/ss3.jpg)
+=======
+# coding-arena
+>>>>>>> c017ea9a044ef8709fdbb513dc3caeae5eb1b191
