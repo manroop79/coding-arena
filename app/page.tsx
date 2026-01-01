@@ -65,7 +65,7 @@ export default function HomePage() {
       }
 
       const data = await res.json();
-      // Surface agents used in the response for quick inspection
+
       console.log("[client] run created", data.runId, "agents:", data.run?.agents, "unavailable:", data.unavailableAgents);
       setRun(data.runId, data.run.agents, data.unavailableAgents);
       setUnavailableAgents(data.unavailableAgents ?? []);

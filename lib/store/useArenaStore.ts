@@ -85,4 +85,3 @@ export const useArenaStore = create<ArenaState>((set: (partial: Partial<ArenaSta
       agentState: {}
     }))
 }));
-

@@ -33,4 +33,3 @@ export function unifiedDiff(filePath: string, oldContent: string, newContent: st
 
   return [...header, ...body].join("\n");
 }
-

@@ -48,4 +48,3 @@ export function MobilePanels({ timeline, artifacts }: MobilePanelsProps) {
     </>
   );
 }
-

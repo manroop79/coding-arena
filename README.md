@@ -131,10 +131,10 @@ Open http://localhost:3000
 ---
 
 ## Screenshots
-- Desktop and mobile views (in `app/public/`):
-  - ![Timeline + Agents](app/public/ss1.jpg)
-  - ![Mobile Composer](app/public/ss2.jpg)
-  - ![Mobile Timeline Drawer](app/public/ss3.jpg)
+- Desktop and mobile views (in `public/`):
+  - ![Timeline + Agents](public/ss1.jpg)
+  - ![Mobile Composer](public/ss2.jpg)
+  - ![Mobile Timeline Drawer](public/ss3.jpg)
 =======
 # coding-arena
 >>>>>>> c017ea9a044ef8709fdbb513dc3caeae5eb1b191

@@ -9,4 +9,3 @@ export async function writeFileSafe(path: string, content: string, encoding: Buf
   await ensureDir(dirname(path));
   await writeFile(path, content, { encoding });
 }
-

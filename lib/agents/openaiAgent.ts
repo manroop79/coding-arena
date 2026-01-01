@@ -39,7 +39,6 @@ async function* streamOpenAI(
   let fullText = "";
   let sawContent = false;
 
-  // 1️⃣ Immediately announce liveness
   yield {
     agentId,
     type: "status",
@@ -130,7 +129,7 @@ async function* streamOpenAI(
         }
 
         if (textChunk.length > 0) {
-          // 2️⃣ Emit incremental streaming messages
+
           yield {
             agentId,
             type: "message",
@@ -152,7 +151,7 @@ async function* streamOpenAI(
     }
   }
 
-  // Safety fallback
+
   const finalText =
     fullText.trim().length > 0
       ? fullText
@@ -169,7 +168,7 @@ async function* streamOpenAI(
     timestamp: Date.now()
   };
 
-  // Emit done status at the end if we didn't earlier
+
   yield {
     agentId,
     type: "status",
@@ -195,7 +194,7 @@ export const openaiAgent: AgentAdapter = {
     const agentId = "openai-agent";
     console.log("[openai-agent] invoked");
 
-    // 0️⃣ Always emit CONNECTING immediately
+
     yield {
       agentId,
       type: "status",
@@ -203,7 +202,7 @@ export const openaiAgent: AgentAdapter = {
       timestamp: Date.now()
     };
 
-    // Helper for mock fallback
+ 
     const relayMock = async function* () {
       for await (const evt of mockAgent.startRun(input)) {
         yield {
@@ -213,7 +212,7 @@ export const openaiAgent: AgentAdapter = {
       }
     };
 
-    // If key missing → fallback
+
     if (!hasOpenAI(process.env)) {
       yield {
         agentId,
@@ -226,7 +225,7 @@ export const openaiAgent: AgentAdapter = {
       return;
     }
 
-    // Try real OpenAI streaming
+
     try {
       const attachmentContext = await buildAttachmentContext(input.attachments);
       yield* streamOpenAI(input, attachmentContext);

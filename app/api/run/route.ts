@@ -122,7 +122,6 @@ export async function POST(request: NextRequest) {
     uploadDir: process.env.UPLOAD_DIR ?? "./tmp/uploads"
   };
 
-  // Fire and forget agent execution; do not block request.
   startAgents(run, adapters, input).catch((error) => {
     console.error("Agent start failure", error);
   });

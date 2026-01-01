@@ -89,4 +89,3 @@ export async function startAgents(run: AgentRun, adapters: AgentAdapter[], input
     adapters.map((adapter) => drainAdapter(adapter, run.id, { ...input, runId: run.id }))
   );
 }
-

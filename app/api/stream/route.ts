@@ -60,7 +60,6 @@ export async function GET(request: NextRequest) {
     send({ comment: HEARTBEAT_COMMENT });
   }, 15000);
 
-  // Send connection ack and replay existing events in chronological order.
   send({ comment: "connected" });
   const existingEvents = Object.values(run.eventsByAgent)
     .flat()

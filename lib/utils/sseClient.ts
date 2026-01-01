@@ -19,4 +19,3 @@ export function openEventStream(runId: string, onEvent: EventHandler, onError?: 
 
   return () => es.close();
 }
-
