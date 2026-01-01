@@ -130,5 +130,7 @@ Open http://localhost:3000
 ---
 
 ## Screenshots
-See `public/` for UI snapshots (desktop and mobile drawers). Screenshot paths can be referenced in documentation or demos.
-
+- Desktop and mobile views (in `app/public/`):
+  - ![Timeline + Agents](app/public/ss1.jpg)
+  - ![Mobile Composer](app/public/ss2.jpg)
+  - ![Mobile Timeline Drawer](app/public/ss3.jpg)
